@@ -1,0 +1,15 @@
+C:\Users\joao_franca\source\repos\jcf\src\Jcf.Dominio\bin\Debug\net6.0\Jcf.Dominio.exe
+C:\Users\joao_franca\source\repos\jcf\src\Jcf.Dominio\bin\Debug\net6.0\Jcf.Dominio.deps.json
+C:\Users\joao_franca\source\repos\jcf\src\Jcf.Dominio\bin\Debug\net6.0\Jcf.Dominio.runtimeconfig.json
+C:\Users\joao_franca\source\repos\jcf\src\Jcf.Dominio\bin\Debug\net6.0\Jcf.Dominio.dll
+C:\Users\joao_franca\source\repos\jcf\src\Jcf.Dominio\bin\Debug\net6.0\ref\Jcf.Dominio.dll
+C:\Users\joao_franca\source\repos\jcf\src\Jcf.Dominio\bin\Debug\net6.0\Jcf.Dominio.pdb
+C:\Users\joao_franca\source\repos\jcf\src\Jcf.Dominio\obj\Debug\net6.0\Jcf.Dominio.csproj.AssemblyReference.cache
+C:\Users\joao_franca\source\repos\jcf\src\Jcf.Dominio\obj\Debug\net6.0\Jcf.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joao_franca\source\repos\jcf\src\Jcf.Dominio\obj\Debug\net6.0\Jcf.Dominio.AssemblyInfoInputs.cache
+C:\Users\joao_franca\source\repos\jcf\src\Jcf.Dominio\obj\Debug\net6.0\Jcf.Dominio.AssemblyInfo.cs
+C:\Users\joao_franca\source\repos\jcf\src\Jcf.Dominio\obj\Debug\net6.0\Jcf.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\joao_franca\source\repos\jcf\src\Jcf.Dominio\obj\Debug\net6.0\Jcf.Dominio.dll
+C:\Users\joao_franca\source\repos\jcf\src\Jcf.Dominio\obj\Debug\net6.0\ref\Jcf.Dominio.dll
+C:\Users\joao_franca\source\repos\jcf\src\Jcf.Dominio\obj\Debug\net6.0\Jcf.Dominio.pdb
+C:\Users\joao_franca\source\repos\jcf\src\Jcf.Dominio\obj\Debug\net6.0\Jcf.Dominio.genruntimeconfig.cache

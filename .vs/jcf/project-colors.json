@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "3b19ba8e-051f-4a1e-964c-0ff0538a8409": {
+      "ProjectGuid": "3b19ba8e-051f-4a1e-964c-0ff0538a8409",
+      "DisplayName": "Jcf.Dominio",
+      "ColorIndex": 0
+    },
+    "ad1eaa93-4ef2-4ed9-ae7a-9f1987465c39": {
+      "ProjectGuid": "ad1eaa93-4ef2-4ed9-ae7a-9f1987465c39",
+      "DisplayName": "Jcf.Infraestrutura",
+      "ColorIndex": 1
+    },
+    "f81fa02b-5807-4e6a-bd17-534cc93f82a2": {
+      "ProjectGuid": "f81fa02b-5807-4e6a-bd17-534cc93f82a2",
+      "DisplayName": "Jcf.Web",
+      "ColorIndex": 2
+    },
+    "4fad6022-20bd-4151-8812-e908bc07fb37": {
+      "ProjectGuid": "4fad6022-20bd-4151-8812-e908bc07fb37",
+      "DisplayName": "Jcf.Web",
+      "ColorIndex": 3
+    },
+    "6be89049-2c1f-4a53-931e-1729e9e576b6": {
+      "ProjectGuid": "6be89049-2c1f-4a53-931e-1729e9e576b6",
+      "DisplayName": "Jcf.Web",
+      "ColorIndex": 4
+    }
+  },
+  "NextColorIndex": 5
+}
