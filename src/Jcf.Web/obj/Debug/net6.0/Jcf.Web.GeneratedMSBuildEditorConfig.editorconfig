@@ -11,12 +11,20 @@ build_property.RootNamespace = Jcf.Web
 build_property.ProjectDir = C:\Users\joao_franca\source\repos\jcf\src\Jcf.Web\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\joao_franca\source\repos\jcf\src\Jcf.Web
 build_property._RazorSourceGeneratorDebug = 
 
 [C:/Users/joao_franca/source/repos/jcf/src/Jcf.Web/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joao_franca/source/repos/jcf/src/Jcf.Web/Views/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joao_franca/source/repos/jcf/src/Jcf.Web/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/joao_franca/source/repos/jcf/src/Jcf.Web/Views/Home/Index.cshtml]
@@ -27,12 +35,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/joao_franca/source/repos/jcf/src/Jcf.Web/Views/Home/Teste.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUZXN0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/joao_franca/source/repos/jcf/src/Jcf.Web/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/joao_franca/source/repos/jcf/src/Jcf.Web/Views/Shared/_LayoutHeadPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRIZWFkUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joao_franca/source/repos/jcf/src/Jcf.Web/Views/Shared/_LayoutLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/joao_franca/source/repos/jcf/src/Jcf.Web/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joao_franca/source/repos/jcf/src/Jcf.Web/Views/Shared/_MenuLateral.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NZW51TGF0ZXJhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/joao_franca/source/repos/jcf/src/Jcf.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
@@ -50,3 +74,7 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/joao_franca/source/repos/jcf/src/Jcf.Web/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-4e5b9eucur
+
+[C:/Users/joao_franca/source/repos/jcf/src/Jcf.Web/Views/Shared/_LayoutBCK.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRCQ0suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-02uhvxlhpi

@@ -1,5 +1,4 @@
 using Jcf.Infraestrutura.Contextos;
-using Jcf.Web.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,11 +10,24 @@ builder.Services.AddDbContext<AppDBContexto>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+builder.Services.AddDefaultIdentity<IdentityUser>(options =>
+                            {
+                                options.SignIn.RequireConfirmedAccount = true;
+                            })
     .AddEntityFrameworkStores<AppDBContexto>();
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddRazorPages()
+        .AddRazorRuntimeCompilation();
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/Account/Login";
+    options.AccessDeniedPath = "/Account/AccessDenied";
+});
+
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
