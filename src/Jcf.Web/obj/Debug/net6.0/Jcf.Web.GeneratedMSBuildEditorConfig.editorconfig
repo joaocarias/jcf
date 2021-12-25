@@ -55,8 +55,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/joao_franca/source/repos/jcf/src/Jcf.Web/Views/Shared/_MenuLateral.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NZW51TGF0ZXJhbC5jc2h0bWw=
+[C:/Users/joao_franca/source/repos/jcf/src/Jcf.Web/Views/Shared/_MenuLateralPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NZW51TGF0ZXJhbFBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joao_franca/source/repos/jcf/src/Jcf.Web/Views/Shared/_MenuTopPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NZW51VG9wUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/joao_franca/source/repos/jcf/src/Jcf.Web/Views/Shared/_ValidationScriptsPartial.cshtml]

@@ -1,4 +1,4 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
+﻿$(".link_logout_menu_top").on("click", function () {
+    console.log("logout");
+    $(".form_logout_menu_top").submit();
+});
