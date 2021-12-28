@@ -1,5 +1,5 @@
+using Jcf.Dominio.Entidades;
 using Jcf.Infraestrutura.Contextos;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,10 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<AppDBContexto>(options =>
-    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+                        options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options =>
+builder.Services.AddDefaultIdentity<AppUser>(options =>
                             {
                                 options.SignIn.RequireConfirmedAccount = true;
                             })
