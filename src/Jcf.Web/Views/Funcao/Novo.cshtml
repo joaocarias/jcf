@@ -1,0 +1,45 @@
+﻿@model Jcf.Web.Models.Funcao.FuncaoViewModel
+@using Jcf.Dominio.Uteis
+
+<div class="card">
+    <div class="card-body">
+        <h3 class="card-title">@ConstantesStrings.TITULO_FUNCAO</h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@Url.ActionLink("Index","Home")">Home</a></li>
+                <li class="breadcrumb-item"><a href="@Url.ActionLink("Index","Funcao")">@ConstantesStrings.TITULO_FUNCAO</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Novo Cadastro</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="card mt-3">
+    <div class="card-header">
+        Novo Cadastro
+    </div>
+    <div class="card-body">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="col-6 mb-3">
+                <label asp-for="Nome" class="form-label"></label>
+                <input asp-for="Nome" class="form-control form-control" type="text" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+
+            <div class="mt-3">
+                <input type="submit" value="Salvar" class="btn btn-sm btn-primary" />
+                <a href="@Url.ActionLink("Index", "Funcao")" class="btn btn-sm btn-warning">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+

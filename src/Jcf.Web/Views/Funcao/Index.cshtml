@@ -1,0 +1,72 @@
+﻿@model IList<Jcf.Web.Models.Funcao.FuncaoViewModel>
+@using Jcf.Dominio.Uteis
+
+<div class="card">
+    <div class="card-body">
+        <h3 class="card-title">@ConstantesStrings.TITULO_FUNCAO</h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@Url.ActionLink("Index","Home")">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">@ConstantesStrings.TITULO_FUNCAO</li>
+            </ol>
+        </nav>
+
+        <hr />
+
+        <a class="btn btn-primary btn-sm" href="@Url.ActionLink("Novo","Funcao")">Novo Cadastro</a>
+
+    </div>
+</div>
+
+
+<div class="card mt-3">
+    <div class="card-header">
+        Registros
+    </div>
+    <div class="card-body">
+        @if (Model != null && Model.Any())
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <div class="alert alert-warning mt-3" role="alert">
+                @ConstantesStrings.ITENS_NAO_ENCONTRADOS
+            </div>
+        }
+
+    </div>
+</div>
+
+
+
+
+
