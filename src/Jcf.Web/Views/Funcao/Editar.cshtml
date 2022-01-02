@@ -8,7 +8,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="@Url.ActionLink("Index","Home")">Home</a></li>
                 <li class="breadcrumb-item"><a href="@Url.ActionLink("Index","Funcao")">@ConstantesStrings.TITULO_FUNCAO</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Novo Cadastro</li>
+                <li class="breadcrumb-item active" aria-current="page">@ConstantesStrings.TITULO_PAGINA_EDITAR_CADASTRO</li>
             </ol>
         </nav>
     </div>
@@ -16,11 +16,13 @@
 
 <div class="card mt-3">
     <div class="card-header">
-        Novo Cadastro
+        @ConstantesStrings.TITULO_PAGINA_EDITAR_CADASTRO
     </div>
     <div class="card-body">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <input type="hidden" asp-for="Id" />
 
             <div class="col-6 mb-3">
                 <label asp-for="Nome" class="form-label"></label>
@@ -30,11 +32,12 @@
 
             <div class="mt-3">
                 <button type="submit" class="btn btn-sm btn-primary"> <i class="fas fa-save"></i> Salvar </button>
-                <a asp-action="Index" asp-controller="Funcao"  class="btn btn-sm btn-warning"> <i class="fas fa-ban"></i> Cancelar</a>
+                <a asp-action="Detalhar" asp-controller="Funcao" asp-route-id="@Model.Id"  class="btn btn-sm btn-warning"> <i class="fas fa-ban"></i> Cancelar</a>
             </div>
         </form>
     </div>
 </div>
+
 
 
 

@@ -1,0 +1,56 @@
+﻿@model Jcf.Web.Models.Funcao.FuncaoViewModel
+@using Jcf.Dominio.Uteis
+
+<div class="card">
+    <div class="card-body">
+        <h3 class="card-title">@ConstantesStrings.TITULO_FUNCAO</h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@Url.ActionLink("Index","Home")">Home</a></li>
+                <li class="breadcrumb-item"><a href="@Url.ActionLink("Index","Funcao")">@ConstantesStrings.TITULO_FUNCAO</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Detalhes</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="card mt-3">
+    <div class="card-header">
+        @ConstantesStrings.TITULO_PAGINA_DETALHES
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                ID: <strong>@Model.Id</strong>
+            </div>
+
+            <div class="col-md-6">
+                Nome: <strong>@Model.Nome</strong>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <hr />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <a asp-action="editar" asp-controller="funcao" asp-route-id="@Model.Id" class="btn btn-primary btn-sm"><i class="far fa-edit"></i> Editar </a>
+                <a href="#" class="btn btn-danger btn-sm btn-excluir" id-model="@Model.Id"> <i class="far fa-trash-alt"></i> Excluir </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<partial name="_ModalExcluirCadastroPartial" />
+
+@section Scripts {
+    <script type="text/javascript">
+    $('.btn-excluir').on('click', function() {
+        var id = $(this).attr('id-model');
+        $('#url-modal-excluir').attr('href', '/funcao/excluir/' + id);
+        $('#ModalExcluir').modal('show');
+    });
+</script>
+}

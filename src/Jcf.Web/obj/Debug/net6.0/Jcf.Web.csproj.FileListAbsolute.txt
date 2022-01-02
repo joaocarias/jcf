@@ -573,3 +573,5 @@ C:\Users\joao_franca\source\repos\jcf\src\Jcf.Web\bin\Debug\net6.0\Microsoft.Asp
 C:\Users\joao_franca\source\repos\jcf\src\Jcf.Web\bin\Debug\net6.0\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\joao_franca\source\repos\jcf\src\Jcf.Web\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout - Cópia.cshtml.rz.scp.css
 C:\Users\joao_franca\source\repos\jcf\src\Jcf.Web\obj\Debug\net6.0\scopedcss\Views\Shared\_LayoutAdminKit.cshtml.rz.scp.css
+C:\Users\joao_franca\source\repos\jcf\src\Jcf.Web\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\joao_franca\source\repos\jcf\src\Jcf.Web\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

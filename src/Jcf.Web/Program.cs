@@ -1,6 +1,11 @@
+using AutoMapper;
 using Jcf.Dominio.Entidades;
+using Jcf.Dominio.IRepositorio;
 using Jcf.Infraestrutura.Contextos;
+using Jcf.Infraestrutura.Repositorio;
+using Jcf.Web.AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,8 +31,11 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.AccessDeniedPath = "/Account/AccessDenied";
 });
 
-var app = builder.Build();
+builder.Services.AddAutoMapper(typeof(AppProfile));
 
+builder.Services.AddScoped<IFuncaoRepositorio, FuncaoRepositorio>();
+
+var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

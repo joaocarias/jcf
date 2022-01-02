@@ -12,5 +12,18 @@ namespace Jcf.Web.Models
         public DateTime? DataExclusao { get; set; }
 
         public bool Ativo { get; set; } = true;
+
+        public void SetNovo(Guid? usuarioCriacaoId)
+        {
+            UsuarioCriacaoId = usuarioCriacaoId;
+            Ativo = true;
+            DataCriacao = DateTime.Now;
+        }
+
+        public void SetAlteracao(Guid? usuarioAlteracaoId)
+        {
+            UsuarioAlteracaoId = usuarioAlteracaoId;
+            DataAlteracao = DateTime.Now;
+        }
     }
 }
