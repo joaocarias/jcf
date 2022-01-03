@@ -14,5 +14,11 @@ namespace Jcf.Dominio.Entidades
 
         public bool Ativo { get; set; } = true;
 
+        public void Excluir(Guid usuarioId)
+        {
+            UsuarioAlteracaoId = usuarioId;
+            DataExclusao = DateTime.Now;
+            Ativo = false;
+        }
     }
 }

@@ -652,3 +652,5 @@ C:\Users\joao_franca\source\repos\jcf\tests\Jcf.Testes\obj\Debug\net6.0\Jcf.Test
 C:\Users\joao_franca\source\repos\jcf\tests\Jcf.Testes\obj\Debug\net6.0\ref\Jcf.Testes.dll
 C:\Users\joao_franca\source\repos\jcf\tests\Jcf.Testes\obj\Debug\net6.0\Jcf.Testes.pdb
 C:\Users\joao_franca\source\repos\jcf\tests\Jcf.Testes\obj\Debug\net6.0\Jcf.Testes.genruntimeconfig.cache
+C:\Users\joao_franca\source\repos\jcf\tests\Jcf.Testes\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\joao_franca\source\repos\jcf\tests\Jcf.Testes\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

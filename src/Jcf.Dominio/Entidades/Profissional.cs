@@ -11,6 +11,10 @@ namespace Jcf.Dominio.Entidades
         public string Email { get; set; }
         public string Telefone { get; set; }
 
+        [Required]
+        public string Cpf { get; set; }
+
+
         public Guid? EnderecoId { get; set; }
 
         [ForeignKey(nameof(EnderecoId))]
@@ -20,5 +24,19 @@ namespace Jcf.Dominio.Entidades
 
         [ForeignKey(nameof(FuncaoId))]
         public Funcao Funcao { get; set; }
+
+        public void Atualizar(string nome, DateTime dataNascimento, string email, string telefone, string cpf, Guid funcaoId, Guid usuarioId)
+        {
+            Nome = nome;
+            DataNascimento = dataNascimento;
+            Email = email;
+            Telefone = telefone;
+            Cpf = cpf;
+
+            FuncaoId = funcaoId;
+            
+            DataAlteracao = DateTime.Now;
+            UsuarioAlteracaoId = usuarioId;
+        }
     }
 }

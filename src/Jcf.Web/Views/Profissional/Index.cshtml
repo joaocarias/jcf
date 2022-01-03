@@ -1,0 +1,64 @@
+﻿@model IList<Jcf.Web.Models.Profissional.ProfissionalViewModel>
+@using Jcf.Dominio.Uteis
+
+<div class="card">
+    <div class="card-body">
+        <h3 class="card-title">@ConstantesStrings.TITULO_PROFISSIONAIS</h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home"> Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">@ConstantesStrings.TITULO_PROFISSIONAIS</li>
+            </ol>
+        </nav>
+
+        <hr />
+
+        <a class="btn btn-primary btn-sm" asp-action="Create" asp-controller="Profissional">
+            <i class="far fa-file-alt"></i> @ConstantesStrings.TITULO_PAGINA_NOVO_CADASTRO
+        </a>
+
+    </div>
+</div>
+
+<div class="card mt-3">
+    <div class="card-header">
+        Registros
+    </div>
+    <div class="card-body">
+        @if (Model != null && Model.Any())
+        {
+            <table class="table table-striped table-sm">
+                <thead>
+                    <tr>
+                        <th scope="col">CPF</th>
+                        <th scope="col">Nome</th>                        
+                        <th scope="col">Data de Nascimento</th>
+                        <th scope="col">Função</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <td scope="row">@item.Cpf</td>
+                        <td>@item.Nome</td>
+                        <td>@item.DataNascimento.ToString("dd/MM/yyyy")</td>
+                        <td>@item.Funcao?.Nome</td>
+                        <td class="text-right">
+                           <a asp-action="Details" asp-controller="Profissional" asp-route-id="@item.Id" class="btn btn-dark btn-sm"><i class="far fa-folder-open"></i> Detalhes</a>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <div class="alert alert-warning mt-3" role="alert">
+                @ConstantesStrings.ITENS_NAO_ENCONTRADOS
+            </div>
+        }
+
+    </div>
+</div>

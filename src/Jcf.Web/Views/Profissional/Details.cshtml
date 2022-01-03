@@ -1,0 +1,128 @@
+﻿@model Jcf.Web.Models.Profissional.ProfissionalViewModel
+@using Jcf.Dominio.Uteis
+
+<div class="card">
+    <div class="card-body">
+        <h3 class="card-title">@ConstantesStrings.TITULO_FUNCAO</h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Home</a></li>
+                <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Profissional">@ConstantesStrings.TITULO_PROFISSIONAIS</a></li>
+                <li class="breadcrumb-item active" aria-current="page">@ConstantesStrings.TITULO_PAGINA_DETALHES</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="card mt-3">
+    <div class="card-header">
+        @ConstantesStrings.TITULO_PAGINA_DETALHES
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-5">
+                ID: <strong>@Model.Id</strong>
+            </div>
+                        
+            <div class="col-md-7">
+                Nome: <strong>@Model.Nome</strong>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-5">
+                Função: <strong>@Model.Funcao?.Nome</strong>
+            </div>
+                        
+            <div class="col-md-3">
+                Data de Nascimento: <strong>@Model.DataNascimento.ToString("dd/MM/yyyy")</strong>
+            </div>
+
+            <div class="col-md-4">
+                CPF: <strong>@Model.Cpf</strong>
+            </div>            
+        </div>
+
+         <div class="row">
+            <div class="col-md-5">
+                Telefone: <strong>@Model.Telefone</strong>
+            </div>
+
+            <div class="col-md-7">
+                E-mail: <strong>@Model.Email</strong>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <hr />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-5">
+                Logradouro: <strong>@Model.Endereco?.Logradouro</strong>
+            </div>
+
+            <div class="col-md-2">
+                Nº: <strong>@Model.Endereco?.Numero</strong>
+            </div>
+
+            <div class="col-md-5">
+                Complemento: <strong>@Model.Endereco?.Complemento</strong>
+            </div>
+        </div>
+
+         <div class="row">
+            <div class="col-md-5">
+                Bairro: <strong>@Model.Endereco?.Bairro</strong>
+            </div>
+
+            <div class="col-md-7">
+                CEP: <strong>@Model.Endereco?.Cep</strong>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-5">
+                Cidade: <strong>@Model.Endereco?.Cidade</strong>
+            </div>
+
+            <div class="col-md-2">
+                UF: <strong>@Model.Endereco?.Uf</strong>
+            </div>
+
+            <div class="col-md-5">
+                Observações: <strong>@Model.Endereco?.Obs</strong>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <hr />
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <a asp-action="edit" asp-controller="Profissional" asp-route-id="@Model.Id" class="btn btn-primary btn-sm"><i class="far fa-edit"></i> Editar </a>
+                <a href="#" class="btn btn-danger btn-sm btn-excluir" id-model="@Model.Id"> <i class="far fa-trash-alt"></i> Excluir </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<partial name="_ModalExcluirCadastroPartial" />
+
+@section Scripts {
+    <script type="text/javascript">
+    $('.btn-excluir').on('click', function() {
+        var id = $(this).attr('id-model');
+        $('#url-modal-excluir').attr('href', '/Profissional/delete/' + id);
+        $('#ModalExcluir').modal('show');
+    });
+</script>
+}

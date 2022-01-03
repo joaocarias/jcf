@@ -34,6 +34,7 @@ builder.Services.ConfigureApplicationCookie(options =>
 builder.Services.AddAutoMapper(typeof(AppProfile));
 
 builder.Services.AddScoped<IFuncaoRepositorio, FuncaoRepositorio>();
+builder.Services.AddScoped<IProfissionalRepositorio, ProfissionalRepositorio>();
 
 var app = builder.Build();
 

@@ -42,9 +42,6 @@ namespace Jcf.Infraestrutura.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("tinyint(1)");
 
-                    b.Property<Guid?>("EnderecoId")
-                        .HasColumnType("char(36)");
-
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("tinyint(1)");
 
@@ -83,8 +80,6 @@ namespace Jcf.Infraestrutura.Migrations
                         .HasColumnType("varchar(256)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("EnderecoId");
 
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
@@ -247,6 +242,10 @@ namespace Jcf.Infraestrutura.Migrations
 
                     b.Property<bool>("Ativo")
                         .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("Cpf")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<DateTime?>("DataAlteracao")
                         .HasColumnType("datetime(6)");
@@ -423,15 +422,6 @@ namespace Jcf.Infraestrutura.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
-                });
-
-            modelBuilder.Entity("Jcf.Dominio.Entidades.AppUser", b =>
-                {
-                    b.HasOne("Jcf.Dominio.Entidades.Endereco", "Endereco")
-                        .WithMany()
-                        .HasForeignKey("EnderecoId");
-
-                    b.Navigation("Endereco");
                 });
 
             modelBuilder.Entity("Jcf.Dominio.Entidades.Cliente", b =>

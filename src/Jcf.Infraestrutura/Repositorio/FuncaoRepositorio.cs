@@ -30,17 +30,25 @@ namespace Jcf.Infraestrutura.Repositorio
 
         public async Task<Funcao> ApagarAsync(Funcao entity)
         {
-            _contexto.Funcaos.Update(entity);
-            await _contexto.SaveChangesAsync();
+            try
+            {
+                _contexto.Funcaos.Update(entity);
+                await _contexto.SaveChangesAsync();
+            }
+            catch (Exception ex) { }
 
             return entity;
         }
 
         public async Task<Funcao> AtualizarAsync(Funcao entity)
         {
-            _contexto.Funcaos.Update(entity);
-            await _contexto.SaveChangesAsync();
-
+            try
+            {
+                _contexto.Funcaos.Update(entity);
+                await _contexto.SaveChangesAsync();
+            }
+            catch (Exception ex) { }
+            
             return entity;
         }
 
@@ -54,8 +62,7 @@ namespace Jcf.Infraestrutura.Repositorio
             catch (Exception e)
             {
                 return null;
-            }
-            
+            }            
         }
 
         public List<Funcao>? ObteTodos()
