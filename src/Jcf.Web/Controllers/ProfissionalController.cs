@@ -15,12 +15,14 @@ namespace Jcf.Web.Controllers
         private readonly IMapper _mapper;
         private readonly IProfissionalRepositorio _profissionalRepositorio;
         private readonly IFuncaoRepositorio _funcaoRepositorio;
+        private readonly IEnderecoRepositorio _enderecoRepositorio;
 
-        public ProfissionalController(IMapper mapper, IProfissionalRepositorio profissionalRepositorio, IFuncaoRepositorio funcaoRepositorio)
+        public ProfissionalController(IMapper mapper, IProfissionalRepositorio profissionalRepositorio, IFuncaoRepositorio funcaoRepositorio, IEnderecoRepositorio enderecoRepositorio)
         {
             _mapper = mapper;
             _profissionalRepositorio = profissionalRepositorio;
             _funcaoRepositorio = funcaoRepositorio;
+            _enderecoRepositorio = enderecoRepositorio;
         }
 
         public IActionResult Index()
@@ -56,6 +58,7 @@ namespace Jcf.Web.Controllers
             if (ModelState.IsValid)
             {
                 model.SetNovo(User.GetId());
+                model.Endereco?.SetNovo(User.GetId());
                 var entidade = _mapper.Map<Profissional>(model);
 
                 var novoCadastro = await _profissionalRepositorio.AdicionarAsync(entidade);
@@ -88,9 +91,23 @@ namespace Jcf.Web.Controllers
                 {
                     if(entidade.EnderecoId != null && entidade.EnderecoId.HasValue)
                     {
+                        var endereco = _enderecoRepositorio.Obter(entidade.EnderecoId.GetValueOrDefault());
 
+                        if (endereco != null)
+                        {
+                            endereco.Logradouro = model.Endereco == null ? string.Empty : model.Endereco.Logradouro;
+                            endereco.Numero = model.Endereco == null ? string.Empty : model.Endereco.Numero;
+                            endereco.Complemento = model.Endereco == null ? string.Empty : model.Endereco.Complemento;
+                            endereco.Cep = model.Endereco == null ? string.Empty : model.Endereco.Cep;
+                            endereco.Bairro = model.Endereco == null ? string.Empty : model.Endereco.Bairro;
+                            endereco.Cidade = model.Endereco == null ? string.Empty : model.Endereco.Cidade;
+                            endereco.Uf = model.Endereco == null ? string.Empty : model.Endereco.Uf;
+                            endereco.Obs = model.Endereco == null ? string.Empty : model.Endereco.Obs;
+                        }
+
+                        entidade.Endereco = endereco;
                     }
-
+                    
                     entidade.Atualizar(model.Nome, model.DataNascimento, model.Email, model.Telefone, model.Cpf, model.FuncaoId, User.GetId());
 
                     await _profissionalRepositorio.AtualizarAsync(entidade);

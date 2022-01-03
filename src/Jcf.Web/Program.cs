@@ -35,6 +35,7 @@ builder.Services.AddAutoMapper(typeof(AppProfile));
 
 builder.Services.AddScoped<IFuncaoRepositorio, FuncaoRepositorio>();
 builder.Services.AddScoped<IProfissionalRepositorio, ProfissionalRepositorio>();
+builder.Services.AddScoped<IEnderecoRepositorio, EnderecoRepositorio>();
 
 var app = builder.Build();
 
